@@ -3,13 +3,9 @@ function compra(valor) {
   dataLayer.push({
     event: "purchase",
     ecommerce: {
-      transaction_id: "T12345",
-      affiliation: "Online Store",
+      transaction_id: String((Math.random() * 1000).toFixed()),
       value: "59.89",
-      tax: "4.90",
-      shipping: "5.99",
       currency: "EUR",
-      coupon: "SUMMER_SALE",
       items: [
         {
           item_name: "Triblend Android T-Shirt",
