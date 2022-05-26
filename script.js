@@ -1,4 +1,4 @@
-function compra(valor) {
+function finalizar(valor) {
   dataLayer.push({ ecommerce: null });
   dataLayer.push({
     event: "purchase",
@@ -10,22 +10,38 @@ function compra(valor) {
         {
           item_name: "Triblend Android T-Shirt",
           item_id: "12345",
-          price: String(valor),
-          item_brand: "Google",
-          item_category: "Apparel",
-          item_variant: "Gray",
-          quantity: 1,
         },
         {
           item_name: "Donut Friday Scented T-Shirt",
           item_id: "67890",
-          price: 33.75,
-          item_brand: "Google",
-          item_category: "Apparel",
-          item_variant: "Black",
-          quantity: 1,
         },
       ],
     },
+  });
+}
+
+function adicionar(){
+  gtag("event", "add_to_cart", {
+    currency: "BR",
+    value: 7.77,
+    items: [
+      {
+        item_id: "SKU_12345",
+        item_name: "Stan and Friends Tee",
+      }
+    ]
+  });
+}
+
+function tirar(){
+  gtag("event", "remove_from_cart", {
+    currency: "USD",
+    value: 7.77,
+    items: [
+      {
+        item_id: "SKU_12345",
+        item_name: "Stan and Friends Tee",
+      }
+    ]
   });
 }

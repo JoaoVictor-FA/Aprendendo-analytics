@@ -48,24 +48,44 @@
     <!-- End Google Tag Manager (noscript) -->
     <span style="display: flex">
       <div>
-        <img src="coca cola.jpg" />
+        <img style="height: 200px;" src="coca cola.jpg" />
         <br />
-        <button onclick="compra(10.00)" class="addCart">
+        <button onclick="adicionar(10.00)">
           Adicionar na sacola
         </button>
+        <div>
+          <button onclick="tirar(5.00)">
+            Tirar da sacola
+          </button>
+        </div>
       </div>
       <div>
-        <img src="coca cola.jpg" />
+        <img style="height: 200px;" src="agua.jpg" />
         <br />
-        <button onclick="compra(5.00)" class="addCart2">
+        <button onclick="adicionar(5.00)">
           Adicionar na sacola
         </button>
+        <div>
+          <button onclick="tirar(5.00)">
+            Tirar da sacola
+          </button>
+        </div>
       </div>
       <div>
-        <img src="coca cola.jpg" />
+        <img style="height: 200px;" src="garrafa.jpg" />
         <br />
-        <button onclick="compra(1.00)">Adicionar na sacola</button>
+        <button onclick="adicionar(1.00)">
+          Adicionar na sacola
+        </button>
+        <div>
+          <button onclick="tirar(5.00)">
+            Tirar da sacola
+          </button>
+        </div>
       </div>
+      <button onclick="finalizar(1.00)">
+        finalizar
+      </button>
     </span>
     <script type="text/javascript" src="script.js"></script>
   </body>
